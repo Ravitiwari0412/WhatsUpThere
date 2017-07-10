@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codingblocks.whatsupthere.Service.WeatherServiceCallBack;
 import com.codingblocks.whatsupthere.Service.YahooWeatherService;
@@ -54,6 +55,7 @@ public class RealActivity extends AppCompatActivity implements WeatherServiceCal
 
     @Override
     public void serviceFailure(Exception exception) {
+        Toast.makeText(this,exception.getMessage(),Toast.LENGTH_LONG).show();
 
     }
 }
